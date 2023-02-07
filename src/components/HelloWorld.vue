@@ -1,25 +1,18 @@
 <template>
 <!-- Allen's buttons-->
-<button id="Duplicate" class="DuplicateBut">New duplicate</button>
-<button id="Toggle" class="ToggleButt">Toggle color</button>
-<button id="Header" class="HeaderButt" type="button">Change heading</button>
-<button id="Delete" class="DeleteButt">Delete 1 card</button>
-<button id="Details" class="DetailsButt">Details</button>
+<div class="topbuttons">
+  <button id="Duplicate">New duplicate</button>
+  <button id="Color">Toggle color</button>
+  <button id="Header">Change heading</button>
+  <button id="Delete">Delete 1 card</button>
+<div>
 <!-- Allen's Card-->
   <div id="card1" class="card">
   <p id="header1" class="header">Team Fortress 2 Pyroland<p>
   <p id="bod1" class="bod">This is a screenshot from a 3D rendered animation posted to Youtube by Valve Corporation to promote the video-game Team Fortress 2</p>
   <p id="bod2" class="bod">The video is called "Meet the Pyro"</p>
   <img class="img" src="https://images.gamebanana.com/img/ss/mods/54f8f277e231a.webp" alt="">
-  <a class="button" id="details" onclick="myFunc()">Details</a>
-    <script> 
-      function myFunc() {
-  if (document.getElementById('bod1').style.visibility == 'hidden') 
-  {document.getElementById('bod1').style.visibility = 'visible'; document.getElementById('bod2').style.visibility = 'visible'; }
-  else
-    {document.getElementById('bod1').style.visibility = 'hidden'; document.getElementById('bod2').style.visibility = 'hidden'; }
-      }
-    </script>
+  <button id="Details" class="button">Details</button>
   </div>
 <!-- End of Allen's cards-->
 </template>
@@ -38,37 +31,25 @@ const state = reactive({ count: 0 })
 a {
   color: #42b983;
 }
-.DuplicateBut {
-  font-size: 50px;
-  display: block;
-  background-color: red;
-}
-.ToggleButt {
-  font-size: 50px;
-  display: block;
-  background-color: green;
-}
-.HeaderButt {
-  font-size: 50px;
-  display: block;
-  background-color: yellow;
-}
-.DeleteButt {
-  font-size: 50px;
-  display: block;
-  background-color: skyblue;
-}
-.DetailsButt {
-  font-size: 50px;
-  display: block;
-  background-color: orange;
-}
 .alt {
   width: 500px;
   height: 565px;
-  border: 14px solid pink;
-  background-color: magenta;
+  border: 14px solid #72fc79;
+  background-color: cyan;
   text-align: center;
+  border-radius: 20px;
+}
+.topbuttons {
+  display: block;
+}
+
+button {
+  font-size: 24px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  background-color: #94FEFB;
+  font-family: "Monaco", Monospace;
+  border: 4px solid pink;
   border-radius: 20px;
 }
 
@@ -108,7 +89,6 @@ a {
   height: 250px;
   border: 2px inset #94FEFB;
   padding: 8px;
-  margin-bottom: 12px;
   background-color: #ff66cc;
   border-radius: 20px;
 }
@@ -121,17 +101,19 @@ a {
   font-family: "Monaco", Monospace;
   visibility: hidden;
   border-radius: 24px;
-  margin: 80px;
+  margin-top: 0px;
+  font-size: 20px;
 }
 
-.button:hover {
+.topbuttons button:hover,
+.topbuttons button:focus {
   color: hotpink;
   background-color: #94FEFB;
 }
 
-button:focus {
-  color: #03fc0b;
-  background-color: #ff0037;
+.topbuttons button:active {
+  color: #94FEFB;
+  background-color: #ec72fc
 }
 
 @media screen and (max-width: 800px) and (min-width: 500px) {
