@@ -8,7 +8,7 @@
 </div>
 <!-- Allen's Card-->
   <div id="card1" class="card">
-  <p id="header1" class="header">Team Fortress 2 Pyroland<p>
+  <p id="header1" class="header">Team Fortress 2 Pyroland</p>
   <p id="bod1" class="bod">This is a screenshot from a 3D rendered animation posted to Youtube by Valve Corporation to promote the video-game Team Fortress 2</p>
   <p id="bod2" class="bod">The video is called "Meet the Pyro"</p>
   <img class="img" src="https://images.gamebanana.com/img/ss/mods/54f8f277e231a.webp" alt="">
