@@ -39,6 +39,7 @@ a {
   background-color: cyan;
   text-align: center;
   border-radius: 20px;
+  margin: auto;
 }
 .topbuttons {
   display: block;
@@ -106,13 +107,14 @@ button {
   margin-top: 0px;
   font-size: 20px;
 }
-
+.button:hover,
+.button:focus,
 .topbuttons button:hover,
 .topbuttons button:focus {
   color: hotpink;
   background-color: #94FEFB;
 }
-
+.button:active,
 .topbuttons button:active {
   color: #94FEFB;
   background-color: #ec72fc
