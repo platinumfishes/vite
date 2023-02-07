@@ -5,7 +5,7 @@
   <button id="Color">Toggle color</button>
   <button id="Header">Change heading</button>
   <button id="Delete">Delete 1 card</button>
-<div>
+</div>
 <!-- Allen's Card-->
   <div id="card1" class="card">
   <p id="header1" class="header">Team Fortress 2 Pyroland<p>
@@ -31,6 +31,7 @@ const state = reactive({ count: 0 })
 a {
   color: #42b983;
 }
+
 .alt {
   width: 500px;
   height: 565px;
@@ -136,5 +137,6 @@ button {
   }
   .bod {
     font-size: 4vw;
+  }
 }
 </style>
