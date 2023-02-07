@@ -63,6 +63,7 @@ button {
   background-color: #FB94FE;
   text-align: center;
   border-radius: 20px;
+  margin: auto;
 }
 
 .header {
