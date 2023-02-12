@@ -25,6 +25,58 @@ defineProps({
 })
 
 const state = reactive({ count: 0 })
+// <------------------------------------------------------------------------------------------------------------------------------------>
+//New duplicate button
+document.querySelector('#Duplicate').addEventListener('click', function() {
+  const node1 = document.getElementById("card1");
+  let node2 = node1.cloneNode(true);                             
+  document.body.appendChild(node2);         
+});
+
+//Color toggle button
+document.querySelector('#Color').addEventListener('click', function() {
+  if (document.getElementById("card1").className == "card")
+    document.getElementById("card1").className = "alt";
+  else
+    document.getElementById("card1").className = "card";
+});
+
+//Header toggle button
+document.querySelector('#Header').onclick = function() {
+  if (document.getElementById('header1').innerHTML == 'Team Fortress 2 Pyroland')
+    document.getElementById('header1').innerHTML = 'Sussy amogus';
+  else
+    document.getElementById('header1').innerHTML = 'Team Fortress 2 Pyroland';
+};
+
+//Delete button
+document.querySelector('#Delete').addEventListener('click', function() {
+  const list1 = [];
+  var onetime = false;
+  document.querySelectorAll('.card').forEach((item, index) => {
+    list1.push(index);
+    if (list1.length != 1 && onetime === false) {
+      item.remove();
+      onetime = true;
+    }
+  });
+});
+
+//Details button in card
+document.querySelector('#Details').addEventListener('click', function() {
+  if (document.getElementById('bod1').style.visibility == 'hidden') 
+  {
+    document.getElementById('bod1').style.visibility = 'visible';
+    document.getElementById('bod2').style.visibility = 'visible'; 
+  }
+  else
+    {
+    document.getElementById('bod1').style.visibility = 'hidden';
+    document.getElementById('bod2').style.visibility = 'hidden'; 
+    }
+});
+// <------------------------------------------------------------------------------------------------------------------------------------>
+
 </script>
 
 <style scoped>
