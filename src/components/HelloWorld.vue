@@ -43,6 +43,7 @@ a {
 }
 .topbuttons {
   display: block;
+  text-align: center;
 }
 
 button {
